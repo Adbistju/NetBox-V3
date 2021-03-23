@@ -1,4 +1,4 @@
-import DataBase.DataBaseList;
+//import DataBase.DataBaseList;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
@@ -69,9 +69,13 @@ public class ProtoHandlerServer extends ChannelInboundHandlerAdapter {
                         e.printStackTrace();
                     }
                     currentState = State.IDLE;
+                    System.out.println("------------------------------");
+                    System.out.println(str);
+                    System.out.println("------------------------------");
                     String[] credentialValues = str.split("\\s");
                     if(credentialValues[1].equals("reg+")){
-                        DataBaseList.addUSer(credentialValues[2], credentialValues[3], credentialValues[4]);
+                        DataBaseParam.doRegist(credentialValues[3], credentialValues[4], credentialValues[2]);
+                        //DataBaseList.addUSer(credentialValues[2], credentialValues[3], credentialValues[4]);
 //                        System.out.println("name: "+credentialValues[2]);
 //                        System.out.println("Mail: "+credentialValues[3]);
 //                        System.out.println("passw: "+credentialValues[4]);
@@ -79,15 +83,21 @@ public class ProtoHandlerServer extends ChannelInboundHandlerAdapter {
                         svrc.fileManager.createDir(credentialValues[3], svrc.fileManager.getCurrentFolder());
                         svrc.setFileAddresUser(svrc.fileManager.getCurrentFolder() + credentialValues[3]);
                         clients.add(ctx.channel());
-
+//Проблем с регистр была выше
                         for (int i = 0; i < clients.size(); i++) {
                             System.out.println(clients.get(i));
                         }
                         break;
                     }
-                    if (DataBaseList.searchName(credentialValues[1], credentialValues[2])){
+//                    if (DataBaseList.searchName(credentialValues[1], credentialValues[2])){
+//                        System.out.println("add-added");
+//                        svrc.setFileAddresUser(".\\ServerRoot\\"+ DataBaseList.getName(credentialValues[1]));
+//                        clients.add(ctx.channel());
+//                        break;
+//                    }
+                    if (DataBaseParam.doAuth(credentialValues[1], credentialValues[2])){
                         System.out.println("add-added");
-                        svrc.setFileAddresUser(".\\ServerRoot\\"+ DataBaseList.getName(credentialValues[1]));
+                        svrc.setFileAddresUser(".\\ServerRoot\\"+ credentialValues[1]);
                         clients.add(ctx.channel());
                         break;
                     }
