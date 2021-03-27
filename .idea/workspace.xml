@@ -23,12 +23,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7d69037-db8a-4a28-9de8-870ac26fbe75" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverApp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/serverApp/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverApp/src/main/java/DataBase/DataBaseList.java" beforeDir="false" afterPath="$PROJECT_DIR$/serverApp/src/main/java/DataBase/DataBaseList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientApp/src/main/java/ClientControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/clientApp/src/main/java/ClientControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverApp/src/main/java/DataBaseParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/serverApp/src/main/java/DataBaseParam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverApp/src/main/java/FileManager/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/serverApp/src/main/java/FileManager/FileManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverApp/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/serverApp/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverApp/src/main/java/NetWorkSerwer.java" beforeDir="false" afterPath="$PROJECT_DIR$/serverApp/src/main/java/NetWorkSerwer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverApp/src/main/java/ProtoHandlerServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/serverApp/src/main/java/ProtoHandlerServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverApp/target/classes/DataBase/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverApp/target/classes/DataBaseParam.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverApp/target/classes/FileManager/Commands.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverApp/target/classes/FileManager/FileManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverApp/target/classes/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverApp/target/classes/NetWorkSerwer$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverApp/target/classes/NetWorkSerwer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverApp/target/classes/ProtoFileSender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverApp/target/classes/ProtoHandlerServer$State.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverApp/target/classes/ProtoHandlerServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverApp/target/classes/ServerControl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverApp/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverApp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverApp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverApp/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverApp/target/serverApp-1.0-SNAPSHOT.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,30 +78,30 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="D:/DevProg/netty-buffer-4.1.42.Final.jar" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.37241378" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\adbistju\IdeaProjects\BoxNetwork\!\NetW" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\adbistju\IdeaProjects\BoxNetwork\!\NetW" />
-      <recent name="C:\Users\adbistju\IdeaProjects\BoxNetwork\!\NetW\serverApp\src\main\java" />
-      <recent name="C:\Users\adbistju\IdeaProjects\BoxNetwork\!\NetW\clientApp\src\main\java" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="DataBase" />
       <recent name="" />
       <recent name="FileManager" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\adbistju\IdeaProjects\BoxNetwork\!\NetW" />
+      <recent name="C:\Users\adbistju\IdeaProjects\BoxNetwork\!\NetW\serverApp\src\main\java" />
+      <recent name="C:\Users\adbistju\IdeaProjects\BoxNetwork\!\NetW\clientApp\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Main (1)">
     <configuration name="MAin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MAin" />
       <module name="Te" />
@@ -151,51 +168,51 @@
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
     <state x="414" y="164" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1019@0.0.1920.1019" timestamp="1615651094262" />
-    <state x="765" y="210" key="#com.intellij.ide.util.MemberChooser" timestamp="1616516317055">
+    <state x="765" y="210" key="#com.intellij.ide.util.MemberChooser" timestamp="1616847746170">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
     <state x="765" y="210" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1019/-1024.721.1024.738@0.0.1920.1019" timestamp="1615666379903" />
-    <state x="765" y="210" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1019@0.0.1920.1019" timestamp="1616516317055" />
-    <state x="743" y="374" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1615638121481">
+    <state x="765" y="210" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1019@0.0.1920.1019" timestamp="1616847746170" />
+    <state x="743" y="374" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1616845957947">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state x="743" y="374" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1019@0.0.1920.1019" timestamp="1615638121481" />
-    <state x="740" y="264" width="658" height="491" key="FileChooserDialogImpl" timestamp="1616526014317">
+    <state x="743" y="374" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1019@0.0.1920.1019" timestamp="1616845957947" />
+    <state x="740" y="264" width="658" height="491" key="FileChooserDialogImpl" timestamp="1616528787254">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state x="740" y="264" width="658" height="491" key="FileChooserDialogImpl/0.0.1920.1019@0.0.1920.1019" timestamp="1616526014317" />
-    <state width="1877" height="269" key="GridCell.Tab.0.bottom" timestamp="1616525829168">
+    <state x="740" y="264" width="658" height="491" key="FileChooserDialogImpl/0.0.1920.1019@0.0.1920.1019" timestamp="1616528787254" />
+    <state width="1877" height="264" key="GridCell.Tab.0.bottom" timestamp="1616850035885">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
     <state width="1877" height="291" key="GridCell.Tab.0.bottom/0.0.1920.1019/-1024.721.1024.738@0.0.1920.1019" timestamp="1615669477459" />
-    <state width="1877" height="269" key="GridCell.Tab.0.bottom/0.0.1920.1019@0.0.1920.1019" timestamp="1616525829168" />
-    <state width="1877" height="269" key="GridCell.Tab.0.center" timestamp="1616525829168">
+    <state width="1877" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1019@0.0.1920.1019" timestamp="1616850035885" />
+    <state width="1877" height="264" key="GridCell.Tab.0.center" timestamp="1616850035885">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
     <state width="1877" height="291" key="GridCell.Tab.0.center/0.0.1920.1019/-1024.721.1024.738@0.0.1920.1019" timestamp="1615669477458" />
-    <state width="1877" height="269" key="GridCell.Tab.0.center/0.0.1920.1019@0.0.1920.1019" timestamp="1616525829168" />
-    <state width="1877" height="269" key="GridCell.Tab.0.left" timestamp="1616525829168">
+    <state width="1877" height="264" key="GridCell.Tab.0.center/0.0.1920.1019@0.0.1920.1019" timestamp="1616850035885" />
+    <state width="1877" height="264" key="GridCell.Tab.0.left" timestamp="1616850035885">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
     <state width="1877" height="291" key="GridCell.Tab.0.left/0.0.1920.1019/-1024.721.1024.738@0.0.1920.1019" timestamp="1615669477458" />
-    <state width="1877" height="269" key="GridCell.Tab.0.left/0.0.1920.1019@0.0.1920.1019" timestamp="1616525829168" />
-    <state width="1877" height="269" key="GridCell.Tab.0.right" timestamp="1616525829168">
+    <state width="1877" height="264" key="GridCell.Tab.0.left/0.0.1920.1019@0.0.1920.1019" timestamp="1616850035885" />
+    <state width="1877" height="264" key="GridCell.Tab.0.right" timestamp="1616850035885">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
     <state width="1877" height="291" key="GridCell.Tab.0.right/0.0.1920.1019/-1024.721.1024.738@0.0.1920.1019" timestamp="1615669477458" />
-    <state width="1877" height="269" key="GridCell.Tab.0.right/0.0.1920.1019@0.0.1920.1019" timestamp="1616525829168" />
-    <state x="440" y="83" key="SettingsEditor" timestamp="1616526033766">
+    <state width="1877" height="264" key="GridCell.Tab.0.right/0.0.1920.1019@0.0.1920.1019" timestamp="1616850035885" />
+    <state x="440" y="83" key="SettingsEditor" timestamp="1616528716401">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state x="440" y="83" key="SettingsEditor/0.0.1920.1019@0.0.1920.1019" timestamp="1616526033766" />
+    <state x="440" y="83" key="SettingsEditor/0.0.1920.1019@0.0.1920.1019" timestamp="1616528716401" />
     <state x="953" y="0" width="974" height="1026" key="dock-window-1" timestamp="1616517217013">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
     <state x="953" y="0" width="974" height="1026" key="dock-window-1/0.0.1920.1019@0.0.1920.1019" timestamp="1616517217013" />
-    <state x="581" y="170" key="new project wizard" timestamp="1615635392265">
+    <state x="581" y="170" key="new project wizard" timestamp="1616528800527">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state x="581" y="170" key="new project wizard/0.0.1920.1019@0.0.1920.1019" timestamp="1615635392265" />
+    <state x="581" y="170" key="new project wizard/0.0.1920.1019@0.0.1920.1019" timestamp="1616528800527" />
     <state x="803" y="266" key="refactoring.ChangeSignatureDialog" timestamp="1616437626465">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>

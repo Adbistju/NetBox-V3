@@ -76,10 +76,6 @@ public class ProtoHandlerServer extends ChannelInboundHandlerAdapter {
                     if(credentialValues[1].equals("reg+")){
                         DataBaseParam.doRegist(credentialValues[3], credentialValues[4], credentialValues[2]);
                         //DataBaseList.addUSer(credentialValues[2], credentialValues[3], credentialValues[4]);
-//                        System.out.println("name: "+credentialValues[2]);
-//                        System.out.println("Mail: "+credentialValues[3]);
-//                        System.out.println("passw: "+credentialValues[4]);
-//                        System.out.println("add-added");
                         svrc.fileManager.createDir(credentialValues[3], svrc.fileManager.getCurrentFolder());
                         svrc.setFileAddresUser(svrc.fileManager.getCurrentFolder() + credentialValues[3]);
                         clients.add(ctx.channel());
@@ -97,6 +93,7 @@ public class ProtoHandlerServer extends ChannelInboundHandlerAdapter {
 //                    }
                     if (DataBaseParam.doAuth(credentialValues[1], credentialValues[2])){
                         System.out.println("add-added");
+                        System.out.println(".\\ServerRoot\\"+ credentialValues[1]);
                         svrc.setFileAddresUser(".\\ServerRoot\\"+ credentialValues[1]);
                         clients.add(ctx.channel());
                         break;

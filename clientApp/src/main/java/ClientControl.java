@@ -15,7 +15,8 @@ public class ClientControl{
     }
 
     public void start(){
-        System.out.println("Добро пожаловать! Авторизируйтесь auth имя пароль. Введите команду:");
+        System.out.println("Добро пожаловать! Авторизируйтесь auth почта пароль. " +
+                "\nВведите команду:");
         Scanner scanner = new Scanner(System.in);
 
 
@@ -93,7 +94,8 @@ public class ClientControl{
                     System.out.println("ls     - создать файл");
                     System.out.println("cat    - показать содержимое файла");
                     System.out.println("msg    - отправить текствое сообщение");
-                    System.out.println("dl     - удалить имя файла");
+                    System.out.println("mkdir  - создать папку");
+                    System.out.println("dl     - удалить 'имя файла'");
                     System.out.println("srv    - писать перед командами, которые нужно выполнить на сервере");
                     System.out.println("srvdwn - запросить файл с сервера");
                     System.out.println("srvrgs - отправить файл на сервер");

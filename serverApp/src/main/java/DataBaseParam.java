@@ -1,4 +1,7 @@
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+
 public class DataBaseParam {
     private static String port = "3306";
     private static String address = "localhost";
@@ -85,5 +88,24 @@ public class DataBaseParam {
 
     public static void setTableName(String tableName) {
         DataBaseParam.tableName = tableName;
+    }
+
+    public static List getUserList() {
+        List<String> list = new ArrayList();
+        Connection connection = getConnection();
+        String str = null;
+        try {
+            PreparedStatement statement = connection.prepareStatement(
+                    "SELECT `email` FROM `"+tableName+"`"
+            );
+            ResultSet rs = statement.executeQuery();
+            while (rs.next()) {
+                str = rs.getString("email");
+                list.add(str);
+            }
+            return list;
+        } catch (SQLException throwables) {
+            throw new RuntimeException("SWW", throwables);
+        }
     }
 }
