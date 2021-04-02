@@ -1,3 +1,4 @@
+import FileManager.FileManager;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelFuture;
@@ -6,6 +7,9 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+
+import java.io.IOException;
+import java.util.List;
 
 public class NetWorkSerwer {
 
@@ -21,6 +25,13 @@ public class NetWorkSerwer {
     }
 
     public void run() throws Exception {
+        List list = DataBaseParam.getUserList();
+
+        for (int i = 0; i < list.size(); i++) {
+            FileManager.createDirStatic((String) list.get(i));
+        }
+
+
         EventLoopGroup mainGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();
         try {
@@ -41,8 +52,6 @@ public class NetWorkSerwer {
             mainGroup.shutdownGracefully();
             workerGroup.shutdownGracefully();
         }
-
-
     }
 
     public void stop() {

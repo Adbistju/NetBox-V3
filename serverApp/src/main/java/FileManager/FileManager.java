@@ -160,4 +160,8 @@ public class FileManager {
     public void createDir(String fileName) {
         new File(currentFolder+"\\"+fileName).mkdir();
     }
+
+    public static void createDirStatic(String fileName) {
+        new File("ServerRoot"+"\\"+fileName).mkdir();
+    }
 }
