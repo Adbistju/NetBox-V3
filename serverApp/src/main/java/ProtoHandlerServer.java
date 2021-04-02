@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProtoHandlerServer extends ChannelInboundHandlerAdapter {
+    private static int ctxUser = 0;
     public enum State {
         IDLE, NAME_LENGTH, NAME, FILE_LENGTH, FILE, MESSAGE_LENGTH, MESSAGE, SERVER_COMMAND_LENGTH, SERVER_COMMAND
     }
@@ -85,12 +86,12 @@ public class ProtoHandlerServer extends ChannelInboundHandlerAdapter {
                         }
                         break;
                     }
-//                    if (DataBaseList.searchName(credentialValues[1], credentialValues[2])){
-//                        System.out.println("add-added");
-//                        svrc.setFileAddresUser(".\\ServerRoot\\"+ DataBaseList.getName(credentialValues[1]));
-//                        clients.add(ctx.channel());
-//                        break;
-//                    }
+                    /*if (DataBaseList.searchName(credentialValues[1], credentialValues[2])){
+                        System.out.println("add-added");
+                        svrc.setFileAddresUser(".\\ServerRoot\\"+ DataBaseList.getName(credentialValues[1]));
+                        clients.add(ctx.channel());
+                        break;
+                    }*/
                     if (DataBaseParam.doAuth(credentialValues[1], credentialValues[2])){
                         System.out.println("add-added");
                         System.out.println(".\\ServerRoot\\"+ credentialValues[1]);
@@ -106,6 +107,24 @@ public class ProtoHandlerServer extends ChannelInboundHandlerAdapter {
     private String userName(ChannelHandlerContext ctx) {
         System.out.println(ctx.channel().toString());
         return "1";
+    }
+
+    @Override
+    public void channelRegistered(ChannelHandlerContext ctx) throws Exception {
+        System.out.println(ctx.channel()+ " новое подключение");
+        super.channelRegistered(ctx);
+    }
+
+    @Override
+    public void channelUnregistered(ChannelHandlerContext ctx) throws Exception {
+        ctxUser++;
+        System.out.println(ctx.channel() + " отключился");
+        if (ctxUser >= 2){
+            System.gc();
+            System.out.println("Вызов сборщик мусора");
+            ctxUser = 0;
+        }
+        super.channelUnregistered(ctx);
     }
 
     @Override
