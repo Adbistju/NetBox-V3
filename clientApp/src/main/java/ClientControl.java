@@ -107,6 +107,7 @@ public class ClientControl{
             }
             input = scanner.nextLine();
         }
+        System.out.println("Остановка контроллера клиента...");
     }
 
     public String buildierM(String[] credentialValues){

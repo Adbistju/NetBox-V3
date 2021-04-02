@@ -8,13 +8,13 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 
-import java.io.IOException;
+
 import java.util.List;
 
-public class NetWorkSerwer {
+public class NetWorkServer {
 
     public int port;
-    protected NetWorkSerwer(int port) {
+    protected NetWorkServer(int port) {
         this.port = port;
     }
 
@@ -25,6 +25,7 @@ public class NetWorkSerwer {
     }
 
     public void run() throws Exception {
+        FileManager.createDirStatic("ServerRoot");
         List list = DataBaseParam.getUserList();
 
         for (int i = 0; i < list.size(); i++) {

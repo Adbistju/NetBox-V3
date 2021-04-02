@@ -9,5 +9,14 @@ public class Main {
         new Thread(() -> Network.getInstance().start(networkStarter, fileManagerLocal)).start();
         ClientControl clientControl = new ClientControl(fileManagerLocal);
         clientControl.start();
+        System.out.println("Закрытие сетевого подключения...");
+        Network.getInstance().stop();
+
+        try {
+            Thread.sleep(700);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Прекращение работы программы...");
     }
 }
